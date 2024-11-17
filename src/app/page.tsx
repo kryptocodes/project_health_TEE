@@ -93,96 +93,25 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Generate a Remote Attestation.
-          </li>
-          <li>Get TEE Account.</li>
-          <li>Test Signing Capabilities.</li>
-        </ol>
-        <div className={styles.ctas}>
-          <a className={styles.primary} target="_blank"
-             rel="noopener noreferrer" onClick={() => handleClick('/api/remoteAttestation')}>
-            Remote Attestation
-          </a>
-          <a className={styles.primary} target="_blank"
-             rel="noopener noreferrer" onClick={() => handleClick('/api/account/address')}>
-            TEE Account
-          </a>
-        </div>
+        <h1 className={styles.title}>
+          Rizz Risk
+        </h1>
+        <p className={styles.description}>
+          Securely share medical reports using zero-knowledge proofs
+        </p>
+      
 
-        <div className={styles.ctas}>
-          <a className={styles.secondary} target="_blank"
-             rel="noopener noreferrer" onClick={() => handleClick('/api/signMessage')}>
-            Sign Message
+        <footer className={styles.footer}>
+          <a 
+            href="https://github.com/predatorx7/medverify.git"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            View Source Code
           </a>
-          <a className={styles.secondary} target="_blank"
-             rel="noopener noreferrer" onClick={() => handleClick('/api/signTypedData')}>
-            Sign Typed Data
-          </a>
-          <a className={styles.secondary} target="_blank"
-             rel="noopener noreferrer" onClick={() => handleClick('/api/signTransaction')}>
-            Sign Transaction
-          </a>
-        </div>
+        </footer>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://bit.ly/dstack-cheat-sheet"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://docs.phala.network/references/hackathon-guides/ethglobal-sf-hackathon-guide"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Guide
-        </a>
-        <a
-          href="https://github.com/Phala-Network/nextjs-viem-dstack-template"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to Code →
-        </a>
-      </footer>
-      <div className={styles.resultBox}>
-        <h3>Result:</h3>
-        <pre>{result}</pre>
-      </div>
     </div>
   );
 }
