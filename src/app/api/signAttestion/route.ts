@@ -110,11 +110,11 @@ export async function POST(request: Request) {
         });
       
       // encrypt the result with the sender's public key using viem
-      const messageHash = 'true'
-      const encryptedResult = messageHash
+      const messageHash = JSONParsedUserInfo?.isPositive
+      const encryptedResult = keccak256(messageHash)
 
         // Delegated create schema
-        const delegationPrivateKey = process.env.DELEGATION_PRIVATE_KEY
+        const delegationPrivateKey = process.env.DELEGATION_PRIVATE_KEY;
         const schemaInfo = await delegateSignSchema(
             {
                 name: "Medical Report",

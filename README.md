@@ -11,16 +11,27 @@ Prove your health record using zkTLS and TEE Attestation (without revealing your
 
 We are using the Tappd Simulator and Reclaim Protocol for this project
 
+> NOTE: You will need to set the environment variables in the .env file
+
+## Frontend Setup 
+
+ 
+https://github.com/predatorx7/medverify.git
+
+## Install dependencies
+
+
+```bash
+yarn
+```
+
+
 First, run the TEE Attestation Simulator:
 ```bash
 docker run --rm -p 8090:8090 phalanetwork/tappd-simulator:latest
 ```
 
-Next, download the dependencies with `yarn`
 
-```shell
-yarn
-```
 
 Build the docker image
 ```shell
